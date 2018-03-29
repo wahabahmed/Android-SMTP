@@ -53,14 +53,14 @@ public class InfoActivity extends Activity implements OnClickListener {
 
         context = this;
         category = getIntent().getStringExtra("category");
-        Button login = (Button) findViewById(R.id.btn_submit);
+        Button submitButton = (Button) findViewById(R.id.btn_submit);
         userName = (EditText) findViewById(R.id.et_name);
         reciep = (EditText) findViewById(R.id.et_email);
         phone = (EditText) findViewById(R.id.et_phone);
         address = (EditText) findViewById(R.id.et_address);
 
         connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        login.setOnClickListener(this);
+        submitButton.setOnClickListener(this);
 
         if (isInternetConnected()) {
             GPSTracker gpsTracker = new GPSTracker(getApplicationContext());
